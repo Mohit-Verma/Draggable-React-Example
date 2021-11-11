@@ -1,5 +1,5 @@
 .dxc-draggable-handle {
-  cursor: pointer;
+  cursor: move;
   background-color: #cca;
   border: dotted 1px grey;
 }
