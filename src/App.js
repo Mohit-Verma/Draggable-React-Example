@@ -9,7 +9,7 @@ export default function App() {
           <h3>Can be Dragged and a Draggable Handle</h3>
         </div>
       ),
-      draggable: true
+      isHandle: true
     },
     {
       child: (
@@ -17,7 +17,7 @@ export default function App() {
           <h3>Can be Dragged, but not a draggable handle</h3>
         </div>
       ),
-      draggable: false
+      isHandle: false
     },
     {
       child: (
@@ -25,7 +25,7 @@ export default function App() {
           <h3>Can be Dragged and a Draggable Handle</h3>
         </div>
       ),
-      draggable: true
+      isHandle: true
     }
   ];
   return (

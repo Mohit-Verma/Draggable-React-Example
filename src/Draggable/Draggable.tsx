@@ -10,7 +10,7 @@ export const Draggable: React.FunctionComponent<any> = (props: {
     botton: number;
   };
   components: Array<{
-    draggable: boolean;
+    isHandle: boolean;
     child: JSX.Element;
   }>;
 }) => {
@@ -45,12 +45,12 @@ export const Draggable: React.FunctionComponent<any> = (props: {
   };
 
   const renderChildComponents = ({ components = [] }) => {
-    return components.map(({ draggable, child }) => {
-      const draggableClass = draggable
-        ? "dxc-draggable"
+    return components.map(({ isHandle, child }) => {
+      const draggableClass = isHandle
+        ? "dxc-draggable-handle"
         : "dxc-draggable-static";
       const onMouseDownHandle = (event) => {
-        if (!draggable) {
+        if (!isHandle) {
           event.stopPropagation();
         }
       };
